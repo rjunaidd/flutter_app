@@ -13,14 +13,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Scaffold(
+      home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text("app"),
+          backgroundColor: Colors.blueGrey.shade900,
+          title: Text(
+            "Whatsapp",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
         ),
         body: CurrencyConverter(),
       ),
     );
   }
 }
-

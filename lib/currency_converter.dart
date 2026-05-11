@@ -7,25 +7,31 @@ class CurrencyConverter extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blueGrey.shade200,
+        backgroundColor: Colors.green.shade200,
 
-        body: ColoredBox(
-          color: Colors.greenAccent,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                "Hello World",
-                style: TextStyle(
-                  color: Colors.indigo.shade800,
-                  fontSize: 40,
-                  fontWeight: FontWeight.w800,
-                ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              "Hello World",
+              style: TextStyle(
+                color: Colors.indigo.shade800,
+                fontSize: 40,
+                fontWeight: FontWeight.w800,
               ),
-              Text("Hello World"),
-            ],
-          ),
+            ),
+            TextField(
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                hintText: 'Please! Enter enter the amount in USD',
+                hintStyle: TextStyle(color: Colors.white60),
+                prefixIcon: Icon(Icons.money_off_csred_outlined),
+                prefixIconColor: Colors.black,
+                fillColor: Colors.white24
+              ),
+            ),
+          ],
         ),
       ),
     );
