@@ -16,8 +16,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey.shade900,
+          elevation: 10,
+          leading: Icon(Icons.search_rounded , size: 30,color: Colors.white,),
           title: Text(
-            "Whatsapp",
+            "Currency Converter",
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,

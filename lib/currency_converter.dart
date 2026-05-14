@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 class CurrencyConverter extends StatelessWidget {
   const CurrencyConverter({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
+    int result = 0;
+    final TextEditingController textEditingController = TextEditingController();
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.green.shade200,
@@ -34,7 +37,13 @@ class CurrencyConverter extends StatelessWidget {
                 horizontal: 40
               ),
               child: TextField(
-                style: TextStyle(color: Colors.white),
+                
+                controller: textEditingController,
+
+                onSubmitted: (value){
+                  print(value);
+                },
+                style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   hintText: 'Please! Enter enter the amount in USD',
                   hintStyle: TextStyle(color: Colors.black),
@@ -56,15 +65,16 @@ class CurrencyConverter extends StatelessWidget {
             ),
             SizedBox(height: 30,),
 
-            TextButton(onPressed: (){
-              print("Button Clicked!");
-            },
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.amber,
-                  foregroundColor: Colors.black,
-                  fixedSize: Size((double.infinity), 30)
-                ),
-                child: Text("Click Here")),
+            ElevatedButton(
+                onPressed: (){}, 
+                child: Text("Convert")
+            ),
+
+            SizedBox(width: 30,),
+
+
+
+            
 
           ],
         ),
